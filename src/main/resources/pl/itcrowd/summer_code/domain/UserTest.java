@@ -53,3 +53,4 @@ public class UserTest {
         assertTrue(user.equals(user2));
     }
 }
+

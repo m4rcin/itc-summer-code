@@ -30,16 +30,27 @@ public class UserTest {
     }
 
     @Test
+    public void testId()
+    {
+        //given
+        Long id = 1234L;
+        user.setId(id);
+        //when
+
+        //then
+        assertEquals(id , user.getId());
+    }
+
+    @Test
     public void testHashCode()
     {
         //given
         Long L = 1234L; //User Id
         int  hash =  L.hashCode();
+        user.setId(L);
 
         //when
-        user.setId(L);
         int userHash = user.hashCode();
-
         User user2 = new User();
 
         //then
@@ -51,9 +62,9 @@ public class UserTest {
     public void testEquals()
     {
         //given
-        user.setId(2121L);
 
         //when
+        user.setId(2121L);
         User user2 = new User(2121L, "tempemail@wp.pl");
         User user3 = user;
         User user4 = new User();

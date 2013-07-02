@@ -21,9 +21,9 @@ public class UserTest {
     {
         //given
         String email = "superemail@gmail.com";
-        user.setEmail(email);
 
         //when
+        user.setEmail(email);
 
         //then
         assertEquals(email, user.getEmail());
@@ -34,8 +34,9 @@ public class UserTest {
     {
         //given
         Long id = 1234L;
-        user.setId(id);
+
         //when
+        user.setId(id);
 
         //then
         assertEquals(id , user.getId());
@@ -47,11 +48,11 @@ public class UserTest {
         //given
         Long L = 1234L; //User Id
         int  hash =  L.hashCode();
-        user.setId(L);
+        User user2 = new User();
 
         //when
+        user.setId(L);
         int userHash = user.hashCode();
-        User user2 = new User();
 
         //then
         assertEquals(hash , userHash);
@@ -62,12 +63,12 @@ public class UserTest {
     public void testEquals()
     {
         //given
+        User user3 = user;
+        User user4 = new User();
 
         //when
         user.setId(2121L);
         User user2 = new User(2121L, "tempemail@wp.pl");
-        User user3 = user;
-        User user4 = new User();
 
         //then
         assertTrue(user.equals(user2));

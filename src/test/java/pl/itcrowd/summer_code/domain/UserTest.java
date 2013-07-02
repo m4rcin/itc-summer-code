@@ -46,12 +46,12 @@ public class UserTest {
     public void testHashCode()
     {
         //given
-        Long L = 1234L; //User Id
-        int  hash =  L.hashCode();
+        Long userId = 1234L;
+        int  hash =  userId.hashCode();
         User user2 = new User();
 
         //when
-        user.setId(L);
+        user.setId(userId);
         int userHash = user.hashCode();
 
         //then

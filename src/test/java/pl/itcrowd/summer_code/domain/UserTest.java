@@ -63,28 +63,20 @@ public class UserTest {
     public void testEquals()
     {
         //given
-        User user3 = user;
-        User user4 = new User();
+        User user2 = user;
+        User user3 = new User(null , "email@gmail.com");
+        User user5 = new User(null, "email2@gmail.com");
+        Object object = new Object(); //example object for test (Object is other type than User)
 
         //when
         user.setId(2121L);
-        User user2 = new User(2121L, "tempemail@wp.pl");
+        User user4 = new User(2121L, "tempemail@wp.pl");
 
         //then
         assertTrue(user.equals(user2));
-        assertTrue(user.equals(user3));
-        assertFalse(user.equals(user4));
-    }
-
-
-    @Test
-    public void testEqualsOtherType()
-    {
-        //given
-        Object object = new Object(); //example object for test (Object is other type than User)
-        //when
-
-        //then
+        assertFalse(user.equals(user3));
+        assertTrue(user3.equals(user5));
+        assertTrue(user.equals(user4));
         assertFalse(user.equals(object));
     }
 

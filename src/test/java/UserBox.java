@@ -3,7 +3,7 @@ import org.openqa.selenium.WebElement;
 
 import static org.jboss.arquillian.graphene.Graphene.guardHttp;
 
-class UserBox {
+public class UserBox {
 
     @FindBy(css = "[id$=':description']")
     private WebElement description;

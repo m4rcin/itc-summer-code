@@ -1,5 +1,6 @@
 package pl.itcrowd.summer_code.test;
 
+import junit.framework.Assert;
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.graphene.enricher.findby.FindBy;
 import org.jboss.arquillian.junit.Arquillian;
@@ -10,11 +11,6 @@ import org.openqa.selenium.WebDriver;
 @RunWith(Arquillian.class)
 public class UserBoxTest {
 
-    @FindBy(css = ".grayBorderedPanel:nth-of-type(1)")
-    UserBox userBox;
-
-    @Drone
-    WebDriver driver;
 
     /**
      * TERMS
@@ -27,7 +23,9 @@ public class UserBoxTest {
      * Check if Description of Top Psychic contain a short description of Psychic
      */
     @Test
-    public void testDesrtiption(){}
+    public void testDesrtiption(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -40,7 +38,9 @@ public class UserBoxTest {
      * Check if price of Psychic is Displayed and if this price is correct
      */
     @Test
-    public void testPrice(){}
+    public void testPrice(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -56,7 +56,9 @@ public class UserBoxTest {
      * Check if Psychic status in User Box 3 is displayed as Offline
      */
     @Test
-    public void testStatus(){}
+    public void testStatus(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -69,7 +71,9 @@ public class UserBoxTest {
      * Check if Nickname of psychic is not empty
      */
     @Test
-    public void testNickname(){}
+    public void testNickname(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -83,7 +87,9 @@ public class UserBoxTest {
      * Check if current url is correct
      */
     @Test
-    public void testNicknmeClick(){}
+    public void testNicknmeClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -97,7 +103,9 @@ public class UserBoxTest {
      * Check if currentUrl is correct
      */
     @Test
-    public void testImageClick(){}
+    public void testImageClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -111,7 +119,9 @@ public class UserBoxTest {
      * Check if currentUrl is correct
      */
     @Test
-    public void testEmailCLick(){}
+    public void testEmailCLick(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -125,7 +135,9 @@ public class UserBoxTest {
      * Check if currentUrl is correct
      */
     @Test
-    public void testReadMoreClick(){}
+    public void testReadMoreClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     /**
      * TERMS
@@ -138,5 +150,7 @@ public class UserBoxTest {
      * Check if number of User Boxes is equal 6
      */
     @Test
-    public void testCountUserBox(){}
+    public void testCountUserBox(){
+        Assert.fail("Not implemented yet");
+    }
 }

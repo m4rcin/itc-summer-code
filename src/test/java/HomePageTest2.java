@@ -1,4 +1,6 @@
+import org.junit.Assert;
 import org.junit.Test;
+
 
 public class HomePageTest2 {
 
@@ -9,7 +11,9 @@ public class HomePageTest2 {
     * User has entered on a homepage. User clicks on 'Are you PSYCHIC? JOIN NOW' button.
     * EXPECTED
     * User will be redirected to register psychic page */
-    public void testAreYouPsychicJoin(){}
+    public void testAreYouPsychicJoin(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -18,7 +22,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'Register to get 3 minutes chat for free' button.
      * EXPECTED
      * User will be redirected to register user page */
-    public void testRegisterToGet3Minutes(){}
+    public void testRegisterToGet3Minutes(){
+        Assert.fail("Not implemented yet");
+    }
 
 
     // ########## HEADER ##########
@@ -30,7 +36,8 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on login button.
      * EXPECTED
      * User will be redirected to login page */
-    public void testLoginButton(){}
+    public void testLoginButton(){
+        Assert.fail("Not implemented yet");}
 
     @Test
     /**TERMS
@@ -39,7 +46,8 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on SingUp button.
      * EXPECTED
      * User will be redirected to register user page */
-    public void testLoginSingUp(){}
+    public void testLoginSingUp(){
+        Assert.fail("Not implemented yet");}
 
     @Test
     /**TERMS
@@ -48,7 +56,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on SingUp button.
      * EXPECTED
      * User will be redirected to cart page */
-    public void testShoppingCartClick(){}
+    public void testShoppingCartClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -57,7 +67,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on VopLogo icon.
      * EXPECTED
      * Homepage will be refreshed */
-    public void testVopLogoClick(){}
+    public void testVopLogoClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -66,7 +78,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on EnglishMenu icon.
      * EXPECTED
      * Homepage will be refreshed in english language  */
-    public void testEnglishMenuClick(){}
+    public void testEnglishMenuClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -75,7 +89,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on EnglishMenu icon.
      * EXPECTED
      * Homepage will be refreshed in polish language  */
-    public void testPolishMenuClick(){}
+    public void testPolishMenuClick(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -84,7 +100,8 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on PhysicsButton button.
      * EXPECTED
      * User will be redirected to physics page */
-    public void testPsychicsButtonClick() {}
+    public void testPsychicsButtonClick() {
+        Assert.fail("Not implemented yet");}
 
     @Test
     /**TERMS
@@ -93,7 +110,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on Marketplace button.
      * EXPECTED
      * User will be redirected to Marketplace page */
-    public void testMarketplaceButton(){}
+    public void testMarketplaceButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -102,7 +121,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on blog button.
      * EXPECTED
      * User will be redirected to blog page */
-    public void testBlogButton(){}
+    public void testBlogButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -111,35 +132,43 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'My account' button.
      * EXPECTED
      * User will be redirected to 'mailbox' page */
-    public void testMyaccountButton(){}
+    public void testMyaccountButton(){
+        Assert.fail("Not implemented yet");
+    }
 
 
     @Test
     /**TERMS
      * Validates a click 'confirm' button in search section without input letters.
      * SCENARIO
-     * User has entered on a homepage. User clicks on 'confirm' button.
+     * User has entered on a homepage. User doesn't give input letters then clicks on 'confirm' button.
      * EXPECTED
      * User will be redirected to physics page */
-    public void testSearchConfirmButton(){}
+    public void testSearchConfirmButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
      * Validates a click 'confirm' button in search section with correct user name for example "psychic7".
      * SCENARIO
-     * User has entered on a homepage. User clicks on 'confirm' button.
+     * User has entered on a homepage. User gives correct username then clicks on 'confirm' button.
      * EXPECTED
      * User will be redirected to user called psychic7 page */
-    public void testSearchInputField(){}
+    public void testSearchInputField(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
      * Validates a click 'confirm' button in search section with random letters or wrong user name.
      * SCENARIO
-     * User has entered on a homepage. User clicks on 'confirm' button.
+     * User has entered on a homepage. User gives wrong username then clicks on 'confirm' button.
      * EXPECTED
      * User will be redirected to 'No results found!' page */
-    public void testSearchWrongInputField(){}
+    public void testSearchWrongInputField(){
+        Assert.fail("Not implemented yet");
+    }
 
     // ########## FOOTER ##########
 
@@ -150,7 +179,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on help button.
      * EXPECTED
      * User will be redirected to help page */
-    public void testHelpButton(){}
+    public void testHelpButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -159,7 +190,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on about us button.
      * EXPECTED
      * User will be redirected to 'about' page */
-    public void testAboutUsButton(){}
+    public void testAboutUsButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -168,7 +201,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'How it works' button.
      * EXPECTED
      * User will be redirected to 'How it works' page */
-    public void testHowItWorksButton(){}
+    public void testHowItWorksButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -177,7 +212,9 @@ public class HomePageTest2 {
     * User has entered on a homepage. User clicks on 'About Physic Readings' button.
     * EXPECTED
     * User will be redirected to 'physic reading' page */
-    public void testAboutPsychicReadingsButton(){}
+    public void testAboutPsychicReadingsButton(){
+        Assert.fail("Not implemented yet");
+    }
 
 
     @Test
@@ -187,7 +224,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'contact us' button.
      * EXPECTED
      * User will be redirected to 'contact' page */
-    public void testContactUsButton(){}
+    public void testContactUsButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -196,7 +235,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'privacy policy' button.
      * EXPECTED
      * User will be redirected to 'privacy policy' page */
-    public void testPrivacyPolicyButton(){}
+    public void testPrivacyPolicyButton(){
+        Assert.fail("Not implemented yet");
+    }
 
 
     @Test
@@ -206,7 +247,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'terms & conditions' button.
      * EXPECTED
      * User will be redirected to 'terms & conditions' page */
-    public void testTermsConditionsButton(){}
+    public void testTermsConditionsButton(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -215,7 +258,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'connect with us by Facebook' button.
      * EXPECTED
      * User will be redirected to facebook.com/PsychicMarketplace */
-    public void testConnectWithUsByFB(){}
+    public void testConnectWithUsByFB(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -224,7 +269,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'connect with us by Twitter' button.
      * EXPECTED
      * User will be redirected to twitter.com/voiceofpsychic */
-    public void testConnectWithUsByTwitter(){}
+    public void testConnectWithUsByTwitter(){
+        Assert.fail("Not implemented yet");
+    }
 
     @Test
     /**TERMS
@@ -233,7 +280,9 @@ public class HomePageTest2 {
      * User has entered on a homepage. User clicks on 'connect with us by Pinterest' button.
      * EXPECTED
      * User will be redirected to pinterest.com/voiceofpsychic/ */
-    public void testConnectWithUsByPinterest(){}
+    public void testConnectWithUsByPinterest(){
+        Assert.fail("Not implemented yet");
+    }
 
 
 

@@ -1,3 +1,5 @@
+package pl.itcrowd.summer_code.test;
+
 import org.junit.Assert;
 import org.junit.Test;
 

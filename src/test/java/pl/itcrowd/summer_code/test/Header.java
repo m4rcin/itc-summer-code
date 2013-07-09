@@ -1,5 +1,3 @@
-package pl.itcrowd.summer_code.test;
-
 import org.jboss.arquillian.graphene.context.GrapheneContext;
 import org.jboss.arquillian.graphene.enricher.findby.FindBy;
 import org.openqa.selenium.WebElement;
@@ -8,21 +6,29 @@ import org.openqa.selenium.interactions.Actions;
 import static org.jboss.arquillian.graphene.Graphene.guardHttp;
 import static org.jboss.arquillian.graphene.Graphene.waitGui;
 
+/**
+ * Created with IntelliJ IDEA.
+ * User: Wybraniec
+ * Date: 04.07.13
+ * Time: 08:23
+ * To change this template use File | Settings | File Templates.
+ */
+
 public class Header {
 
     @FindBy(css = "div.row-fluid.logoWrapper")
     private WebElement vopLogo;
 
-    @FindBy(css= "div.navbar-inner ul.nav > li:nth-of-type(1) > a")
+    @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(1) > a")
     private WebElement psychicsButton;
 
-    @FindBy(css= "div.navbar-inner ul.nav li:nth-of-type(3) > a")
+    @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(3) > a")
     private WebElement marketplaceButton;
 
-    @FindBy(css= "div.navbar-inner ul.nav li:nth-of-type(5) > a")
+    @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(5) > a > href")
     private WebElement blogButton;
 
-    @FindBy(css= "div.navbar-inner ul.nav > li:nth-of-type(7) > a")
+    @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(7) > a")
     private WebElement myaccountButton;
 
     @FindBy(className = "searchTemplate")
@@ -102,12 +108,6 @@ public class Header {
         guardHttp(languageMenuPolish).click();
     }
 
-    //Setters
-    public void setSearchInput(String string) {
-        searchInput.clear();
-        searchInput.sendKeys(string);
-    }
-
     //Getters
     public WebElement getVopLogo() {
         return vopLogo;
@@ -155,6 +155,14 @@ public class Header {
 
     public WebElement getLanguageMenuPolish(){
         return languageMenuPolish;
+    }
+
+
+    //Setters
+
+    public void setSearchInput() {
+        searchInput.clear();
+        searchInput.sendKeys("psychic7");
     }
 
     public WebElement getCartAmount() {

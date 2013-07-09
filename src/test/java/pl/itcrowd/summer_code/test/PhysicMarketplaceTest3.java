@@ -30,23 +30,29 @@ public class PhysicMarketplaceTest3 {
         assertEquals("https://itcrowd.pl/vop/product/62", driver.getCurrentUrl());
     }
 
-    /**
-     * TERMS:
-     * This method checks if there is 6 products with images in all 16 products.
-     * src must be checked to do this
-     *
-     * SCENARIO:
-     * 1. Go to the main page
-     * 2. Check thumbnails id's
-     *
-     * EXPECTED:
-     * Thumbnails are different to each other only by id
-     * So, assertions must check that each 'n' every thumbnail has expected id
-
     @Test
     public void productsShowedImageTest(){
-        Assert.fail("Not implemented yet");
-    }
-     */
+    //given
+    driver.navigate().to("https://itcrowd.pl/vop/");
+    //when
 
+    //then
+    assertEquals(62, marketplace.getProductId(0));
+    assertEquals(61, marketplace.getProductId(1));
+    assertEquals(60, marketplace.getProductId(2));
+    assertEquals(56, marketplace.getProductId(3));
+    assertEquals(55, marketplace.getProductId(4));
+    assertEquals(54, marketplace.getProductId(5));
+    assertEquals(53, marketplace.getProductId(6));
+    assertEquals(52, marketplace.getProductId(7));
+    assertEquals(51, marketplace.getProductId(8));
+    assertEquals(50, marketplace.getProductId(9));
+    assertEquals(9, marketplace.getProductId(10));
+    assertEquals(8, marketplace.getProductId(11));
+    assertEquals(7, marketplace.getProductId(12));
+    assertEquals(6, marketplace.getProductId(13));
+    assertEquals(5, marketplace.getProductId(14));
+    assertEquals(4, marketplace.getProductId(15));
+
+    }
 }

@@ -27,7 +27,7 @@ public class Header {
     @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(3) > a")
     private WebElement marketplaceButton;
 
-    @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(5) > a > href")
+    @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(5) > a")
     private WebElement blogButton;
 
     @FindBy(css= "div.span12 div:nth-of-type(2) ul.nav > li:nth-of-type(7) > a")

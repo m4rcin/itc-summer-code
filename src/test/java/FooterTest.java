@@ -23,12 +23,12 @@ public class FooterTest {
     WebDriver browser;
     @Before
     public void beforeTests(){
-        browser.navigate().to("https://itcrowd.pl/vop/");
+
     }
     @Test
     public void testHelpButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.helpButtonClick();
         //Then
@@ -37,7 +37,7 @@ public class FooterTest {
     @Test
     public void testAboutUsButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.aboutUsButtonClick();
         //Then
@@ -46,7 +46,7 @@ public class FooterTest {
     @Test
     public void testHowItWorksButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.howItWorksButtonClick();
         //Then
@@ -55,7 +55,7 @@ public class FooterTest {
     @Test
     public void testAboutPsychicReadingsButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.aboutPsychicReadingsButtonClick();
         //Then
@@ -64,7 +64,7 @@ public class FooterTest {
     @Test
     public void testContactUsButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.contactUsButtonClick();
         //Then
@@ -73,7 +73,7 @@ public class FooterTest {
     @Test
     public void testPrivacyPolicyButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.privacyPolicyButtonClick();
         //Then
@@ -82,7 +82,7 @@ public class FooterTest {
     @Test
     public void testTermsConditionsButton(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.termsConditionsButtonClick();
         //Then
@@ -91,7 +91,7 @@ public class FooterTest {
     @Test
     public void testConnectWithUsByFB(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.connectWithUsByFBClick();
         //Then
@@ -100,7 +100,7 @@ public class FooterTest {
     @Test
     public void testConnectWithUsByTwitter(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.connectWithUsByTwitterClick();
         //Then
@@ -109,7 +109,7 @@ public class FooterTest {
     @Test
     public void testConnectWithUsByPinterest(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.connectWithUsByPinterestClick();
         //Then
@@ -118,7 +118,7 @@ public class FooterTest {
     @Test
     public void testConnectWithUsByYT(){
         //Given
-        //URL of the main page is given in @Before
+        browser.navigate().to("https://itcrowd.pl/vop/");
         //When
         footer.connectWithUsByYTClick();
         //Then

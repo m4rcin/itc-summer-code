@@ -259,7 +259,7 @@ public class HomePageTest2 {
      * SCENARIO
      * User has entered on a homepage. User clicks on 'connect with us by Facebook' button.
      * EXPECTED
-     * User will be redirected to facebook.com/PsychicMarketplace */
+     * User will be redirected to facebook.com/pl.itcrowd.summer_code.test.Newsletter.PsychicMarketplace */
     public void testConnectWithUsByFB(){
         Assert.fail("Not implemented yet");
     }

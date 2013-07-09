@@ -4,6 +4,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+import pl.itcrowd.summer_code.test.Newsletter;
 
 import java.util.UUID;
 

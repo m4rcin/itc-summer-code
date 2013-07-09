@@ -16,7 +16,7 @@ public class PhysicMarketplaceTest3 {
     WebDriver driver;
 
     @FindBy(xpath = "//*[@id=\"wrap\"]/div[2]/div[4]/div[2]")
-    private PhysicMarketplace3 marketplace;
+    private PhysicMarketplace marketplace;
 
 
     @Test

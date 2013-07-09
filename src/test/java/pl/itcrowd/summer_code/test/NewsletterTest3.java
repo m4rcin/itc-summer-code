@@ -19,7 +19,7 @@ public class NewsletterTest3 {
     WebDriver driver;
 
     @Page
-    private Newsletter3 newsletter;
+    private Newsletter newsletter;
 
     @Test
     public void twoSameEmailToSubscibeTest(){

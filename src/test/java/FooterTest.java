@@ -23,72 +23,105 @@ public class FooterTest {
     WebDriver browser;
     @Before
     public void beforeTests(){
-
+        browser.navigate().to("https://itcrowd.pl/vop/");
     }
     @Test
     public void testHelpButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/view/help.jsf?content=LOGIN_SIGNUP_CUSTOMER&mode=CUSTOMER");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.helpButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/view/help.jsf?content=LOGIN_SIGNUP_CUSTOMER&mode=CUSTOMER"));
     }
     @Test
     public void testAboutUsButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/page/ABOUT");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.aboutUsButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/page/ABOUT"));
     }
     @Test
     public void testHowItWorksButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/view/help.jsf?content=LOGIN_SIGNUP_CUSTOMER&mode=CUSTOMER");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.howItWorksButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/view/help.jsf?content=LOGIN_SIGNUP_CUSTOMER&mode=CUSTOMER"));
     }
     @Test
     public void testAboutPsychicReadingsButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/page/PSYCHIC_READING");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.aboutPsychicReadingsButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/page/PSYCHIC_READING"));
     }
     @Test
     public void testContactUsButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/contact");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.contactUsButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/contact"));
     }
     @Test
     public void testPrivacyPolicyButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/page/PRIVACY_POLICY");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.privacyPolicyButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/page/PRIVACY_POLICY"));
     }
     @Test
     public void testTermsConditionsButton(){
-        browser.navigate().to("https://itcrowd.pl/vop/page/TERMS");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.termsConditionsButtonClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://itcrowd.pl/vop/page/TERMS"));
     }
     @Test
     public void testConnectWithUsByFB(){
-        browser.navigate().to("https://itcrowd.pl/vop/");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.connectWithUsByFBClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://www.facebook.com/PsychicMarketplace"));
     }
     @Test
     public void testConnectWithUsByTwitter(){
-        browser.navigate().to("https://itcrowd.pl/vop/");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.connectWithUsByTwitterClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://twitter.com/voiceofpsychic"));
     }
     @Test
     public void testConnectWithUsByPinterest(){
-        browser.navigate().to("https://itcrowd.pl/vop/");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.connectWithUsByPinterestClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("http://pinterest.com/voiceofpsychic/"));
     }
     @Test
     public void testConnectWithUsByYT(){
-        browser.navigate().to("https://itcrowd.pl/vop/");
+        //Given
+        //URL of the main page is given in @Before
+        //When
         footer.connectWithUsByYTClick();
+        //Then
         assertTrue(browser.getCurrentUrl().startsWith("https://www.youtube.com/voiceofpsychic"));
     }
 

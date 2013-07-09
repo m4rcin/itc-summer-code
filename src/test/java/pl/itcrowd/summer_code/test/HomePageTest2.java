@@ -55,7 +55,7 @@ public class HomePageTest2 {
     /**TERMS
      * Validates a click Shopping cart icon.
      * SCENARIO
-     * User has entered on a homepage. User clicks on SingUp button.
+     * User has entered on a homepage. User clicks on Shopping cart button.
      * EXPECTED
      * User will be redirected to cart page */
     public void testShoppingCartClick(){

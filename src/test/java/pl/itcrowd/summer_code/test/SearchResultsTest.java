@@ -2,7 +2,6 @@ package pl.itcrowd.summer_code.test;
 
 import junit.framework.Assert;
 import org.jboss.arquillian.drone.api.annotation.Drone;
-import org.jboss.arquillian.graphene.spi.annotations.Page;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -17,9 +16,6 @@ import org.openqa.selenium.WebDriver;
 public class SearchResultsTest {
     @Drone
     WebDriver browser;
-
-    @Page
-    SearchResults searchResults;
 
     @Before
     public void beforeTests(){
@@ -38,8 +34,8 @@ public class SearchResultsTest {
      * 4. Do some assertions
      *
      * EXPECTATIONS
-     * You'll be forwarded to the "https://itcrowd.pl/vop/view/searchResult.jsf?find=typed_string"
-     * There will be message displayed in both psychics and market section "No results found"
+     * Link should redirect to the "https://itcrowd.pl/vop/view/searchResult.jsf?find=typed_string"
+     * There should be message displayed in both psychics and market section: "No results found"
      */
     @Test
     public void notFoundSearchEffectTest(){
@@ -58,9 +54,9 @@ public class SearchResultsTest {
      * 4. Do assertions
      *
      * EXPECTATIONS
-     * You'll be forwarded to the "https://itcrowd.pl/vop/view/searchResult.jsf?find=psychic7"
-     * and there will be box displayed in Psychics section
-     * In marketplace section the will be:"No results found"
+     * Link should redirect to the "https://itcrowd.pl/vop/view/searchResult.jsf?find=psychic7"
+     * and there should be box displayed in Psychics section
+     * In marketplace section there should be:"No results found"
      */
     @Test
     public void psychicFoundSearchEffectTest(){
@@ -79,9 +75,9 @@ public class SearchResultsTest {
      * 4. Do assertions
      *
      * EXPECTATIONS
-     * You'll be forwarded to the "https://itcrowd.pl/vop/view/searchResult.jsf?find="
-     * In Psychics section there will be 6 boxes with psychics
-     * In Marketplace section there will be 12 boxes with products
+     * Link should redirect to the "https://itcrowd.pl/vop/view/searchResult.jsf?find="
+     * In Psychics section there should be 6 boxes with psychics
+     * In Marketplace section there should be 12 boxes with products
      */
     @Test
     public void emptyInputSearchEffectTest(){
@@ -99,9 +95,9 @@ public class SearchResultsTest {
      * 4. Do assertions
      *
      * EXPECTATIONS:
-     * You'll be forwarded to the "https://itcrowd.pl/vop/view/searchResult.jsf?find=123"
-     * In Psychics section there will be text: "No results found"
-     * In Marketplace section there will be searched product.
+     * Link should redirect to the "https://itcrowd.pl/vop/view/searchResult.jsf?find=123"
+     * In Psychics section there should be text: "No results found"
+     * In Marketplace section there should be searched product.
      */
     @Test
     public void productSearchTest(){

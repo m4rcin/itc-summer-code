@@ -2,7 +2,6 @@ package pl.itcrowd.summer_code.test;
 
 import junit.framework.Assert;
 import org.jboss.arquillian.drone.api.annotation.Drone;
-import org.jboss.arquillian.graphene.spi.annotations.Page;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -18,9 +17,6 @@ public class MyAccountMessagesTest {
 
     @Drone
     WebDriver browser;
-
-    @Page
-    MyAccountMessages myAccountMessages;
 
     @Before
     public void beforeTests(){
@@ -227,7 +223,7 @@ public class MyAccountMessagesTest {
      *
      * EXPECTATIONS
      * After "cancel" click, pop-up ought to quit, message should not has been saved
-     * You should be at the same page, where you were before
+     * Click shouldn't redirect anywhere, it should return to last focused page
      */
     @Test
     public void saveChangesPopUp_Cancel_Test(){
@@ -247,7 +243,7 @@ public class MyAccountMessagesTest {
      *
      * EXPECTATIONS
      * After "no" click, pop-up ought to quit, message should not has been saved
-     * You should redirected to :"https://itcrowd.pl/vop/private?p=MAILBOX"
+     * Link should redirect to :"https://itcrowd.pl/vop/private?p=MAILBOX"
      */
     @Test
     public void saveChangesPopUp_No_Test(){
@@ -267,7 +263,7 @@ public class MyAccountMessagesTest {
      *
      * EXPECTATIONS
      * After "yes" click, pop-up ought to quit, message should has been saved
-     * You should redirected to :"https://itcrowd.pl/vop/private?p=MAILBOX"
+     * Link should redirect to :"https://itcrowd.pl/vop/private?p=MAILBOX"
      */
     @Test
     public void saveChangesPopUp_Yes_Test(){

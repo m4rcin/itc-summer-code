@@ -2,7 +2,6 @@ package pl.itcrowd.summer_code.test;
 
 import junit.framework.Assert;
 import org.jboss.arquillian.drone.api.annotation.Drone;
-import org.jboss.arquillian.graphene.spi.annotations.Page;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
@@ -18,9 +17,6 @@ public class LoginPageTest {
 
     @Drone
     WebDriver browser;
-
-    @Page
-    LoginPage loginPage;
 
     @Before
     public void beforeTests(){
@@ -39,7 +35,7 @@ public class LoginPageTest {
      * 5. Check if you can find "Welcome: customertest2" button in header
      *
      * EXPECTATIONS
-     * assertEquals("Welcome: customertest2", browser.getWelcomeButtonText())
+     * You correctly logged in. Top menu is now extended by e.g. "Welcome:.."
      */
     @Test
     public void logInTest(){
@@ -58,7 +54,7 @@ public class LoginPageTest {
      *
      * EXPECTATIONS
      * Pop-ups must appear, assert text from them with expected
-     * Moreover, input fields get red, and the same messages appears on the right
+     * Moreover, input fields get red, and the same warnings ("Email is required","Password is required") appears on the right
      */
     @Test
     public void emptyEmailAndPassField(){
@@ -78,8 +74,8 @@ public class LoginPageTest {
      * 5. Do assertions
      *
      * EXPECTATIONS
-     * Pop-up with message "Password is required" must appear
-     * assertEquals passes
+     * Pop-up with warning "Password is required" must appear.
+     * Compare pop-up's text with expected text.
      */
     @Test
     public void emptyPassFieldOnlyTest(){
@@ -100,7 +96,6 @@ public class LoginPageTest {
      *
      * EXPECTATIONS:
      * Pop-up with message "Email is required" must appear
-     * assertEquals passes
      */
     @Test
     public void emptyEmailFieldOnlyTest(){
@@ -121,7 +116,6 @@ public class LoginPageTest {
      *
      * EXPECTATIONS
      * Pop-up with message "Authorization failed" must appear
-     * All asserts must pass
      */
     @Test
     public void wrongEmailOrPasswordTypedTest(){
@@ -138,17 +132,17 @@ public class LoginPageTest {
      * 3. Do assertions
      *
      * EXPECTATIONS:
-     * You will be forwarded to correct page after click
+     * Correctly redirected after click at link.
      * All assertions will succeed
      */
     @Test
-    public void asCustomerButtonTest(){
+    public void registerAsCustomerLinkTest(){
         Assert.fail("Not implemented yet");
     }
 
     /**
      * TERMS:
-     * Checks if you'll be forwarded to "https://itcrowd.pl/vop/view/registerPsychic.jsf"
+     * Checks "register as psychic" redirects to "https://itcrowd.pl/vop/view/registerPsychic.jsf"
      *
      * SCENARIO:
      * 1. Go to itcrowd.pl/vop/login page
@@ -156,17 +150,17 @@ public class LoginPageTest {
      * 3. Do assertions
      *
      * EXPECTATIONS
-     * You'll be forwarded to correct page after click
+     * Link redirects to correct page after click
      * All assertions will succeed
      */
     @Test
-    public void asPsychicButtonTest(){
+    public void registerAsPsychicLinkTest(){
         Assert.fail("Not implemented yet");
     }
 
     /**
      * TERMS
-     * Checks if you'll be forwarded to "https://itcrowd.pl/vop/view/remindPassword.jsf"
+     * Checks if link redirects to "https://itcrowd.pl/vop/view/remindPassword.jsf"
      *
      * SCENARIO:
      * 1. Go to itcrowd.pl/vop/login page
@@ -174,7 +168,7 @@ public class LoginPageTest {
      * 3. Do assertions
      *
      * EXPECTATIONS:
-     * You'll be forwarded to correct page after click
+     * Correctly redirected after click at link.
      * All assertions will succeed
      */
     @Test
@@ -184,7 +178,7 @@ public class LoginPageTest {
 
     /**
      * TERMS:
-     * Checks if you'll be forwarded to "https://itcrowd.pl/vop/view/resendToken.jsf"
+     * Checks if link redirects to "https://itcrowd.pl/vop/view/resendToken.jsf"
      *
      * SCENARIO:
      * 1. Go to itcrowd.pl/vop/login page
@@ -192,7 +186,7 @@ public class LoginPageTest {
      * 3. Do assertions
      *
      * EXPECTATIONS:
-     * You'll be forwarded to correct page after click
+     * Correctly redirected after click at link.
      * All assertions will succeed
      */
     @Test

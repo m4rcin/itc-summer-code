@@ -100,7 +100,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products  in category 'bath and beauty'*/
     @Test
-    public void bathAndBeautyClickTest(){
+    public void goTobBathAndBeautyTest(){
 
     }
     /**TERMS
@@ -110,7 +110,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed  products in category 'bath and body'*/
     @Test
-    public void bathAndBodyClickTest(){
+    public void goToBathAndBodyTest(){
 
     }
     /**TERMS
@@ -120,7 +120,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed  products  in category 'candles'*/
     @Test
-    public void candlesClickTest(){
+    public void goToCandlesClick(){
 
     }
     /**TERMS
@@ -130,7 +130,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'accessories'*/
     @Test
-    public void accessoriesClickTest(){
+    public void goToAccessoriesTest(){
 
     }
     /**TERMS
@@ -140,7 +140,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'accessories'*/
     @Test
-    public void jewelryClickTest(){
+    public void goTojewelryTest(){
 
     }
     /**TERMS
@@ -150,7 +150,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'everything else'*/
     @Test
-    public void everythingElseTest(){
+    public void goToEverythingElseTest(){
 
     }
     /**TERMS
@@ -160,7 +160,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'antique'*/
     @Test
-    public void antiqueClickTest(){
+    public void goToantiqueTest(){
 
     }
     /**TERMS
@@ -170,7 +170,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'books'*/
     @Test
-    public void booksClickTest(){
+    public void goToBooksTest(){
 
     }
     /**TERMS
@@ -180,7 +180,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'e-books'*/
     @Test
-    public void ebooksClickTest(){
+    public void goToEbooksTest(){
 
     }
     /**TERMS
@@ -190,7 +190,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will showed products in category 'paper books'*/
     @Test
-    public void paperBooksClickTest(){
+    public void goToPaperBooksTest(){
 
     }
     /**TERMS
@@ -200,7 +200,7 @@ public class MarketplaceTest {
      * EXPECTED
      * Marketplace page will shown products in category 'audio books'*/
     @Test
-    public void audioBooksClickTest(){
+    public void goToAudioBooksTest(){
 
     }
     /**TERMS
@@ -210,7 +210,7 @@ public class MarketplaceTest {
      * EXPECTED
      * User will be redirected to page specified by thumbnail icon.*/
     @Test
-    public void thumbnailClickTest(){
+    public void thumbnailTest(){
 
     }
     /**TERMS
@@ -220,7 +220,7 @@ public class MarketplaceTest {
      * EXPECTED
      * User will be redirected to page specified by tag.*/
     @Test
-    public void tagClickTest(){
+    public void tagTest(){
 
     }
 }

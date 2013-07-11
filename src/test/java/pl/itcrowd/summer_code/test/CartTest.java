@@ -11,7 +11,7 @@ public class CartTest {
      * EXPECTED
      * Marketplace page will be refreshed without removed product and popup message will shown with text 'Product removed'*/
     @Test
-    public void removeButtonClickTest(){
+    public void removeProductTest(){
     }
     /**TERMS
      * Validates a click on 'clear cart' button.
@@ -20,7 +20,7 @@ public class CartTest {
      * EXPECTED
      * Marketplace page will be refreshed without all products and popup message will shown with text 'Cart cleared'*/
     @Test
-    public void clearCartClickTest(){
+    public void clearCartTest(){
     }
     /**TERMS
      * Validates a click on 'back' button.
@@ -29,7 +29,7 @@ public class CartTest {
      * EXPECTED
      * User will be redirected to homepage'*/
     @Test
-    public void backClickTest(){
+    public void goBackTest(){
     }
     /**TERMS
      * Validates a click on 'checkout' button.
@@ -38,7 +38,7 @@ public class CartTest {
      * EXPECTED
      * User will be redirected to 'checkout' page*/
     @Test
-    public void checkoutClickTest(){
+    public void checkoutTest(){
     }
     /**TERMS
      * Validates a click on 'product name' button.
@@ -47,7 +47,7 @@ public class CartTest {
      * EXPECTED
      * User will be redirected to specified page by product*/
     @Test
-    public void productNameClickTest(){
+    public void productDetailsTest(){
     }
      /**TERMS
      * Validates a functionality of field total order cost.

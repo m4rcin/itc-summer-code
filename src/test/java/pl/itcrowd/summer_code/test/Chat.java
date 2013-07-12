@@ -17,7 +17,7 @@ public class Chat {
     @FindBy(css = "#row_0 div:nth-of-type(1) div:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(2) div input:nth-of-type(1)")
     private WebElement chatButton;
 
-    @FindBy(css = "#chargingInfoModal")
+    @FindBy(id = "chargingInfoModal")
     private WebElement popupAfterChatClick;
 
     @FindBy(css = "div.modal-footer form input:nth-of-type(2)")

@@ -23,28 +23,28 @@ public class Checkout {
     @FindBy(css = ".rf-ntf-sum")
     private WebElement noMoneyInfo;
 
-    @FindBy(css = "#rF\\:firstName\\:i")
+    @FindBy(id = "rF:firstName:i")
     private WebElement personalFirstName;
 
-    @FindBy(css = "#rF\\:lastName\\:i")
+    @FindBy(id = "rF:lastName:i")
     private WebElement personalLastName;
 
-    @FindBy(css = "#newAddress")
+    @FindBy(id = "newAddress")
     private WebElement personalNewAddressChecked;
 
-    @FindBy(css = "#rF\\:telephone\\:i")
+    @FindBy(id = "rF:telephone:i")
     private WebElement personalTelephone;
 
-    @FindBy(css = "#rF\\:addr1\\:i")
+    @FindBy(id = "rF:addr1:i")
     private WebElement personalAddressLine1;
 
-    @FindBy(css = "#rF\\:addr2\\:i")
+    @FindBy(id = "rF:addr2:i")
     private WebElement personalAddressLine2;
 
-    @FindBy(css = "#rF\\:city\\:i")
+    @FindBy(id = "rF:city:i")
     private WebElement personalCity;
 
-    @FindBy(css = "#rF\\:zipcode\\:i")
+    @FindBy(id = "rF:zipcode:i")
     private WebElement personalZipCode;
 
     @FindBy(css = "#rf\\:country\\:i option:nth-of-type(12)")

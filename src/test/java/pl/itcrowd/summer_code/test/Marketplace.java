@@ -37,10 +37,10 @@ public class Marketplace {
     @FindBy(css = "body.marketplace form select:nth-of-type(2) option:nth-of-type(3)")
     private WebElement show24;
 
-    @FindBy(css = "#chargerSCr_ds_next")
+    @FindBy(id = "chargerSCr_ds_next")
     private WebElement nextPageButton;
 
-    @FindBy(css = "#chargerSCr_ds_2")
+    @FindBy(id = "chargerSCr_ds_2")
     private WebElement secondPageOfProductsLink;
 
     @FindBy(css = "#wrap div:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(1) div div:nth-of-type(1) div ul li:nth-of-type(2) a")
@@ -79,7 +79,7 @@ public class Marketplace {
     @FindBy(tagName = "a")
     private WebElement thumbnail;
 
-    @FindBy(css = "#panel")
+    @FindBy(id = "panel")
     private List<Marketplace> thumbnailLink;
 
 

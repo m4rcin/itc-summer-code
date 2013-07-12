@@ -64,6 +64,7 @@ public class MyAccountMyShop {
             buttons.get(1).click();
         }
 
+
         public void contrahentClick()
         {
             guardHttp(contrahent).click();
@@ -96,6 +97,8 @@ public class MyAccountMyShop {
         {
             guardHttp(item).click();
         }
+
+    }
         public void waitingForSellerApprovalClick()
         {
             guardHttp(waitingForSellerApproval).click();
@@ -126,7 +129,7 @@ public class MyAccountMyShop {
         }
 
 
-     }
+
 }
 
 

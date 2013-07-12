@@ -14,10 +14,10 @@ import static org.jboss.arquillian.graphene.Graphene.guardHttp;
  */
 public class Cart {
 
-    @FindBy(css = "[id = 'cartTable.0'] input btn btn-danger")
+    @FindBy(css = "#cartTable\\:0 input btn btn-danger")
     private WebElement removeItemFromCartButton;
 
-    @FindBy(id = "cartTable.0")
+    @FindBy(id = "cartTable\\:0")
     private WebElement rowIndex;
 
     @FindBy(css = "div input:nth-of-type(3)")
@@ -29,10 +29,10 @@ public class Cart {
     @FindBy(css = "div input:nth-of-type(2)")
     private WebElement checkoutButton;
 
-    @FindBy(css = "#cartTable.0 a")
+    @FindBy(css = "#cartTable\\:0 a")
     private WebElement productNameLink;
 
-    @FindBy(css = "#cartTable.f td span")
+    @FindBy(css = "#cartTable\\:f td span")
     private WebElement totalCost;
 
     public String getTotalCost() {

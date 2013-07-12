@@ -23,35 +23,35 @@ public class Checkout {
     @FindBy(css = ".rf-ntf-sum")
     private WebElement noMoneyInfo;
 
-    @FindBy(css = "#rF.firstName.i")
-    private WebElement firstName;
+    @FindBy(css = "#rF\\:firstName\\:i")
+    private WebElement personalFirstName;
 
-    @FindBy(css = "#rF.lastName.i")
-    private WebElement lastName;
+    @FindBy(css = "#rF\\:lastName\\:i")
+    private WebElement personalLastName;
 
     @FindBy(css = "#newAddress")
-    private WebElement newAddressChecked;
+    private WebElement personalNewAddressChecked;
 
-    @FindBy(css = "#rF.telephone.i")
-    private WebElement telephone;
+    @FindBy(css = "#rF\\:telephone\\:i")
+    private WebElement personalTelephone;
 
-    @FindBy(css = "#rF.addr1.i")
-    private WebElement addressLine1;
+    @FindBy(css = "#rF\\:addr1\\:i")
+    private WebElement personalAddressLine1;
 
-    @FindBy(css = "#rF.addr2.i")
-    private WebElement addressLine2;
+    @FindBy(css = "#rF\\:addr2\\:i")
+    private WebElement personalAddressLine2;
 
-    @FindBy(css = "#rF.city.i")
-    private WebElement city;
+    @FindBy(css = "#rF\\:city\\:i")
+    private WebElement personalCity;
 
-    @FindBy(css = "#rF.zipcode.i")
-    private WebElement zipCode;
+    @FindBy(css = "#rF\\:zipcode\\:i")
+    private WebElement personalZipCode;
 
-    @FindBy(css = "#rf.country.i option:nth-of-type(12)")
-    private WebElement country;
+    @FindBy(css = "#rf\\:country\\:i option:nth-of-type(12)")
+    private WebElement personalCountry;
 
-    @FindBy(css = "#rf.region.i option:nth-of-type(15)")
-    private WebElement region;
+    @FindBy(css = "#rf\\:region\\:i option:nth-of-type(15)")
+    private WebElement personalRegion;
 
     @FindBy(tagName = "value")
     private WebElement value;
@@ -65,46 +65,46 @@ public class Checkout {
     @FindBy(css = "#wrap div:nth-of-type(2) span div:nth-of-type(2) input")
     private WebElement buyMoreCreditsButton;
 
-    @FindBy(css = "#rF.cartTable.f td span")
+    @FindBy(css = "#rF\\:cartTable\\:f td span")
     private WebElement totalCost;
 
     @FindBy(css = "#wrap div:nth-of-type(1) div div div:nth-of-type(1) form ul li:nth-of-type(6) a")
     private WebElement creditsHeld;
 
     public String getFirstNameText(){
-        return firstName.getText();
+        return personalFirstName.getText();
     }
 
     public String getLastNameText(){
-        return lastName.getText();
+        return personalLastName.getText();
     }
 
     public String getTelephoneText(){
-        return telephone.getText();
+        return personalTelephone.getText();
     }
 
     public String getAddressLine1Text(){
-        return addressLine1.getText();
+        return personalAddressLine1.getText();
     }
 
     public String getAddressLine2Text(){
-        return addressLine2.getText();
+        return personalAddressLine2.getText();
     }
 
     public String getCityText(){
-        return city.getText();
+        return personalCity.getText();
     }
 
     public String getZipCode(){
-        return zipCode.getText();
+        return personalZipCode.getText();
     }
 
     public String getCountryText(){
-        return country.getText();
+        return personalCountry.getText();
     }
 
     public String getRegionText(){
-        return region.getText();
+        return personalRegion.getText();
     }
 
     public String getMissingQuantityOfCredits(){

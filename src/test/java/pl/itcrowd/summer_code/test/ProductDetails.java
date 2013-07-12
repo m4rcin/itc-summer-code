@@ -8,6 +8,8 @@ import java.util.List;
 import static org.jboss.arquillian.graphene.Graphene.guardHttp;
 
 public class ProductDetails {
+    @FindBy(css = "div.span2 li")
+    private List<Thumbnail> thumbnails;
 
     @FindBy(css = "div.span3 div.span12 .pull-right")
     private WebElement chat;
@@ -18,17 +20,14 @@ public class ProductDetails {
     @FindBy(css = "div.span10 .well")
     private WebElement description;
 
-    @FindBy(css = "div.span2 li")
-    private List<Thumbnail> thumbnails;
-
     @FindBy(className = "div.span3 div.well div.marginBottom10 .pull-right")
     private WebElement readMore;
 
     @FindBy(css = "div.span12 btn-link")
     private WebElement physicProfile;
 
-//    @FindBy(css ="")
-//    private WebElement policyBoxCloseButton;   not implemented yet;
+    @FindBy(css ="#returnPolicyModal div button")
+    private WebElement policyBoxCloseButton;
 
     @FindBy(css = "div.span3 .addToCart")
     private WebElement addToCart;
@@ -134,6 +133,11 @@ public class ProductDetails {
     public String getDescription()
     {
         return description.getText();
+    }
+
+    public void policyBoxCloseButtonClick()
+    {
+        guardHttp(policyBoxCloseButton).click();
     }
 
 }

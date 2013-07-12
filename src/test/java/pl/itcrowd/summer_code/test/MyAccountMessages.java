@@ -16,11 +16,15 @@ import static org.jboss.arquillian.graphene.Graphene.guardHttp;
  */
 public class MyAccountMessages {
 
-    @FindBy(css = "div.span12 div.span3 a")
-    private List<button> emailSection;   //buttons new and mailbox
+
+    @FindBy(css = "body.create-message ul.nav.nav-list li.active")
+    private WebElement newButton;
+
+    @FindBy(css =" body.create-message ul.nav.nav-list li:nth-of-type(3)")
+    private WebElement emailButton;
 
     @FindBy(css = "div.span9 .rf-dt-r")
-    private List<message> messages;
+    private List<Message> messages;
 
     @FindBy(css = "div.span12 div.span9 .pull-right")
     private WebElement remove;
@@ -50,7 +54,7 @@ public class MyAccountMessages {
     private WebElement Add;
 
     @FindBy(css = ".uploaded")
-    private List<uploaded> thumbnails;
+    private List<Uploaded> thumbnails;
 
     @FindBy(css = "body.create-message div.rf-pp-cnt input.btn.pull-left")
     private WebElement popUpCancel;
@@ -70,23 +74,7 @@ public class MyAccountMessages {
     @FindBy(css = "body.create-message form select:nth-of-type(1) option:nth-of-type(4)")
     private WebElement recipient3;
 
-
-
-    public class button{
-        @FindBy(tagName = "a")
-        private WebElement button;
-
-        public String getUrl()
-        {
-            return button.getAttribute("href");
-        }
-
-        public void click()
-        {
-            guardHttp(button).click();
-        }
-    }
-    public class message{
+    public static class Message{
 
         @FindBy(css = ".btn-info")
         private WebElement read;
@@ -103,16 +91,16 @@ public class MyAccountMessages {
             guardHttp(chceckbox).click();
         }
     }
-    public class errorMessage{
+    public static class errorMessage{
         @FindBy(tagName = "id")
         private WebElement message;
 
-        public void getMessageText()
+        public void getMessage()
         {
             message.getText();
         }
     }
-    class uploaded{
+    public static class Uploaded{
         @FindBy(tagName = "img")
         private WebElement image;
 
@@ -126,13 +114,13 @@ public class MyAccountMessages {
             guardHttp(image).click();
         }
     }
-    public void subjectSendKeys(String string)
+    public void setSubject(String string)
     {
         subject.clear();
         subject.clear();
         subject.sendKeys(string);
     }
-    public void contentSendKeys(String string)
+    public void setContent(String string)
     {
         content.clear();
         content.clear();
@@ -140,11 +128,11 @@ public class MyAccountMessages {
     }
     public void newClick()
     {
-        guardHttp(emailSection.get(0)).click();
+        guardHttp(newButton).click();
     }
-    public void mailboxClick()
+    public void emailClick()
     {
-        guardHttp(emailSection.get(1)).click();
+        guardHttp(emailButton).click();
     }
     public void cancelClick()
     {
@@ -178,11 +166,11 @@ public class MyAccountMessages {
     {
         guardHttp(recipient3).click();
     }
-    public String getPopUpText()
+    public String getPopUpMessage()
     {
         return popUp.getText();
     }
-    public String getPopUpAfterCancelText()
+    public String getPopUpAfterCancelMessage()
     {
         return popUpAfterCancel.getText();
     }

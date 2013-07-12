@@ -53,7 +53,7 @@ public class ProductDetails {
     @FindBy(css = "div.span3 div.span12 .heading")
     private WebElement name;
 
-    class Thumbnail{
+    public static class Thumbnail{
 
         @FindBy(tagName = "img")
         private WebElement image;
@@ -116,7 +116,7 @@ public class ProductDetails {
     public String getNumberOfavailableProduct(){
         return availableProducts.getText();
     }
-    public String getPopUpText()
+    public String getPopUpMessage()
     {
         return popUp.getText();
     }

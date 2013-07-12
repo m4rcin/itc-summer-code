@@ -3,6 +3,8 @@ package pl.itcrowd.summer_code.test;
 import org.jboss.arquillian.graphene.enricher.findby.FindBy;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 import static org.jboss.arquillian.graphene.Graphene.guardHttp;
 
 /**
@@ -14,11 +16,8 @@ import static org.jboss.arquillian.graphene.Graphene.guardHttp;
  */
 public class Cart {
 
-    @FindBy(css = "#cartTable\\:0 input btn btn-danger")
-    private WebElement removeItemFromCartButton;
-
-    @FindBy(id = "cartTable\\:0")
-    private WebElement rowIndex;
+    @FindBy(css = "div.span12 tbody:nth-of-type(1)")
+    private List<Product> products;
 
     @FindBy(css = "div input:nth-of-type(3)")
     private WebElement clearCartButton;
@@ -29,22 +28,15 @@ public class Cart {
     @FindBy(css = "div input:nth-of-type(2)")
     private WebElement checkoutButton;
 
-    @FindBy(css = "#cartTable\\:0 a")
-    private WebElement productNameLink;
-
-    @FindBy(css = "#cartTable\\:f td span")
-    private WebElement totalCost;
-
-    public String getTotalCost() {
-        return totalCost.getText();
+    public Double getTotalCost(){
+        Double totalCost = 0.0;
+        for(Product p : products){
+            totalCost += p.getShippingCost() + p.getTotalPrice();
+        }
+        return totalCost;
     }
-
-    public String getRowIndex(){
-        return rowIndex.getText();
-    }
-
-    public void removeItemFromCartButtonClick(){
-        guardHttp(removeItemFromCartButton).click();
+    public void getProductId(int id){
+        products.get(id).getId();
     }
 
     public void clearCartButtonClick(){
@@ -59,7 +51,90 @@ public class Cart {
         guardHttp(checkoutButton).click();
     }
 
-    public void productNameLinkClick(){
-        guardHttp(productNameLink).click();
+    public void clickProductNameClick(int productNumber)
+    {
+        products.get(productNumber).clickProduct();
+    }
+
+    public String getProductUrl(int productNumber)
+    {
+        return products.get(productNumber).getUrl();
+    }
+
+    public void removeButtonClick(int productId){
+        products.get(productId).removeButtonClick();
+    }
+
+    public Integer getQuantity(int productId){
+        return products.get(productId).getQuantity();
+    }
+
+    public Double getPricePerUnit(int productId){
+        return products.get(productId).getPricePerUnit();
+    }
+
+    public Double getTotalPrice(int productId){
+        return products.get(productId).getTotalPrice();
+    }
+
+    public Double getShippingCost(int productId){
+        return products.get(productId).getShippingCost();
+    }
+
+    public static class Product {
+
+        @FindBy(tagName = "a")
+        private WebElement product;
+
+        @FindBy(tagName = "input")
+        private WebElement removeButton;
+
+        @FindBy(css = "td:nth-of-type(2)")
+        private WebElement quantity;
+
+        @FindBy(css = "td:nth-of-type(3)")
+        private WebElement pricePerUnit;
+
+        @FindBy(css = "td:nth-of-type(4)")
+        private WebElement totalPrice;
+
+        @FindBy(css = "td:nth-of-type(5)")
+        private WebElement shippingCost;
+
+        public Integer getQuantity(){
+            return Integer.parseInt(quantity.getText());
+        }
+
+        public Double getPricePerUnit(){
+            return Double.parseDouble(pricePerUnit.getText());
+        }
+
+        public Double getTotalPrice(){
+            return Double.parseDouble(totalPrice.getText());
+        }
+
+        public Double getShippingCost(){
+            return Double.parseDouble(shippingCost.getText());
+        }
+
+        public Integer getId()
+        {
+            String productId = product.getAttribute("href").replaceAll("[https://itcrowd.pl/vop/product/]", "");
+            return Integer.parseInt(productId);
+        }
+
+        public String getUrl()
+        {
+            return product.getAttribute("href");
+        }
+
+        public void clickProduct()
+        {
+            guardHttp(product).click();
+        }
+
+        public void removeButtonClick(){
+            guardHttp(removeButton).click();
+        }
     }
 }

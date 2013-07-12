@@ -35,9 +35,6 @@ public class Cart {
         }
         return totalCost;
     }
-    public void getProductId(int id){
-        products.get(id).getId();
-    }
 
     public void clearCartButtonClick(){
         guardHttp(clearCartButton).click();
@@ -51,34 +48,8 @@ public class Cart {
         guardHttp(checkoutButton).click();
     }
 
-    public void clickProductNameClick(int productNumber)
-    {
-        products.get(productNumber).clickProduct();
-    }
-
-    public String getProductUrl(int productNumber)
-    {
-        return products.get(productNumber).getUrl();
-    }
-
-    public void removeButtonClick(int productId){
-        products.get(productId).removeButtonClick();
-    }
-
-    public Integer getQuantity(int productId){
-        return products.get(productId).getQuantity();
-    }
-
-    public Double getPricePerUnit(int productId){
-        return products.get(productId).getPricePerUnit();
-    }
-
-    public Double getTotalPrice(int productId){
-        return products.get(productId).getTotalPrice();
-    }
-
-    public Double getShippingCost(int productId){
-        return products.get(productId).getShippingCost();
+    public Product getProduct(int productId){
+        return products.get(productId);
     }
 
     public static class Product {
@@ -88,6 +59,9 @@ public class Cart {
 
         @FindBy(tagName = "input")
         private WebElement removeButton;
+
+        @FindBy(css = "td:nth-of-type(1)")
+        private WebElement name;
 
         @FindBy(css = "td:nth-of-type(2)")
         private WebElement quantity;
@@ -101,6 +75,9 @@ public class Cart {
         @FindBy(css = "td:nth-of-type(5)")
         private WebElement shippingCost;
 
+        public String getName(){
+            return name.getText();
+        }
         public Integer getQuantity(){
             return Integer.parseInt(quantity.getText());
         }
@@ -133,7 +110,7 @@ public class Cart {
             guardHttp(product).click();
         }
 
-        public void removeButtonClick(){
+        public void clickRemove(){
             guardHttp(removeButton).click();
         }
     }

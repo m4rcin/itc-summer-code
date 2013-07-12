@@ -71,27 +71,27 @@ public class Checkout {
     @FindBy(css = "#wrap div:nth-of-type(1) div div div:nth-of-type(1) form ul li:nth-of-type(6) a")
     private WebElement creditsHeld;
 
-    public String getFirstNameText(){
+    public String getFirstName(){
         return personalFirstName.getText();
     }
 
-    public String getLastNameText(){
+    public String getLastName(){
         return personalLastName.getText();
     }
 
-    public String getTelephoneText(){
+    public String getTelephone(){
         return personalTelephone.getText();
     }
 
-    public String getAddressLine1Text(){
+    public String getAddressLine1(){
         return personalAddressLine1.getText();
     }
 
-    public String getAddressLine2Text(){
+    public String getAddressLine2(){
         return personalAddressLine2.getText();
     }
 
-    public String getCityText(){
+    public String getCity(){
         return personalCity.getText();
     }
 
@@ -99,11 +99,11 @@ public class Checkout {
         return personalZipCode.getText();
     }
 
-    public String getCountryText(){
+    public String getCountry(){
         return personalCountry.getText();
     }
 
-    public String getRegionText(){
+    public String getRegion(){
         return personalRegion.getText();
     }
 
@@ -118,8 +118,7 @@ public class Checkout {
         return webElement.getAttribute("value");
     }
 
-    public String getBuyCreditsUrlPlusAmount(){
-        String url = "https://itcrowd.pl/vop/private/buyCredits?predefinedQuantity=";
+    public String getBuyCreditsUrlPlusAmount(String url){
         String amount = getMissingQuantityOfCredits();
         return url+amount;
     }
@@ -132,8 +131,7 @@ public class Checkout {
 
     public Double getTotalCost(){
         String costText = totalCost.getText();
-        Double cost =  Double.parseDouble(costText.substring(7));
-        return cost;
+        return  Double.parseDouble(costText.substring(7));
     }
 
     public String getConsiderProposalPopUpText(){

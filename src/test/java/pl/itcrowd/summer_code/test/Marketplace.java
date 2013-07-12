@@ -82,12 +82,6 @@ public class Marketplace {
     @FindBy(id = "panel")
     private List<Marketplace> thumbnailLink;
 
-
-    public Integer getId(){
-        String receivedId = thumbnail.getAttribute("href").replaceAll("[https://itcrowd.pl/vop/shop/]","");
-        return Integer.parseInt(receivedId);
-    }
-
     public void audioBooksSubcategoryLinkClick(){
         guardHttp(audioBooksSubcategoryLink).click();
     }

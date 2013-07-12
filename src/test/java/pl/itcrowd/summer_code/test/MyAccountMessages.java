@@ -42,7 +42,7 @@ public class MyAccountMessages {
     private WebElement sendMessage;
 
     @FindBy(css ="[id$=':message1']")
-    private List<errorMessage> errorMessages;
+    private List<ErrorMessage> errorMessages;
 
     @FindBy(css = "div.rf-ntf-cnt")
     private WebElement popUp;

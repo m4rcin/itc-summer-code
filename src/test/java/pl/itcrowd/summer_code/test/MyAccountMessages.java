@@ -91,7 +91,7 @@ public class MyAccountMessages {
             guardHttp(chceckbox).click();
         }
     }
-    public static class errorMessage{
+    public static class ErrorMessage{
         @FindBy(tagName = "id")
         private WebElement message;
 

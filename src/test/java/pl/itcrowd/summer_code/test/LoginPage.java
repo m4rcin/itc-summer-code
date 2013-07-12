@@ -81,7 +81,7 @@ public class LoginPage {
     public void resendActivationMailClick(){
         guardHttp(resendActivationMailLink).click();
     }
-    public int countPopUps(){
+    public int popUpsSize(){
         return popUps.size();
     }
     public String getPopUpText(int number){

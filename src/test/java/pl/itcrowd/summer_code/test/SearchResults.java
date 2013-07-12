@@ -37,7 +37,7 @@ public class SearchResults {
         searchInput.clear();
         searchInput.sendKeys(string);
     }
-    public void SearchButtonClick(){
+    public void searchButtonClick(){
         guardHttp(searchButton).click();
     }
     //Psychics
@@ -47,13 +47,13 @@ public class SearchResults {
     public String getPsychicNoResultFoundText(){
         return psychiscNoResultsFound.getText();
     }
-    public int countPsychicsFound(){
+    public int psychicsFoundSize(){
         return psychicsFound.size();
     }
     public String getPsychicNickName(int index){
         return psychicsFound.get(index).getNickName();
     }
-    public int countPsychicsScrollerIcons(){
+    public int psychicsScrollerIconsSize(){
         return psychicsScroller.size();
     }
     public void psychicsScrollerIconClick(int index){
@@ -66,7 +66,7 @@ public class SearchResults {
     public String getMarketplaceNoResutFoundText(){
         return marketplaceNoResultsFound.getText();
     }
-    public int countProductsFound(){
+    public int productsFoundSize(){
         return productsFound.size();
     }
     public String getProductName(int index){
@@ -75,7 +75,7 @@ public class SearchResults {
     public String getProductPrice(int index){
         return productsFound.get(index).getProductPrice();
     }
-    public int countProductsScrollerIcons(){
+    public int productsScrollerIconsSize(){
         return productsScroller.size();
     }
     public void productsScrollerIconClick(int index){

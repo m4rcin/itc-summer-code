@@ -12,7 +12,7 @@ public class SearchResults {
     @FindBy(css = "input.searchTemplate")
     private WebElement searchInput;
 
-    @FindBy(css = "#searchBtn")
+    @FindBy(id = "searchBtn")
     private WebElement searchButton;
 
     @FindBy(css = "#wrap div:nth:of:type(2) div:nth-of-type(2) > h2")

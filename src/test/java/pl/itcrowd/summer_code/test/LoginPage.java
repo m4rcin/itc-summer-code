@@ -9,10 +9,10 @@ import static org.jboss.arquillian.graphene.Graphene.guardHttp;
 
 public class LoginPage {
 
-    @FindBy(css = "#lF\\:e\\:i")
+    @FindBy(id = "lF:e:i")
     private WebElement emailInput;
 
-    @FindBy(css = "#lF\\:p\\:i")
+    @FindBy(id = "lF:p:i")
     private WebElement passwordInput;
 
     @FindBy(css = "#lF div.form-actions > input")
@@ -21,10 +21,10 @@ public class LoginPage {
     @FindBy(css = "#row-fluid form.headerForm ul:nth-of-type(1) li:nth-of-type(3) > a")
     private WebElement welcomeUserButton;
 
-    @FindBy(css = "#lF\\:e\\:message1")
+    @FindBy(id = "lF:e:message1")
     private WebElement emptyEmailInputMessage;
 
-    @FindBy(css = "#lF\\:p\\:message1")
+    @FindBy(id = "lF:p:message1")
     private  WebElement emptyPasswordInputMessage;
 
     @FindBy(css = "div.rf-ntf-cnt")
